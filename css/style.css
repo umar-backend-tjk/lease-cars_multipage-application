@@ -1,0 +1,1165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #151515;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.container {
+  max-width: 1220px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.button {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #151515;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  padding: 13px 60px;
+  margin: 0 auto;
+  border: none;
+}
+
+.header {
+  background-color: #151515;
+}
+
+.header-main {
+  background-color: transparent;
+  position: absolute;
+  z-index: 7;
+  left: 0;
+  right: 0;
+}
+
+.header__inner {
+  padding-top: 40px;
+  padding-bottom: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.menu__list {
+  display: flex;
+  gap: 35px;
+}
+
+.menu__btn {
+  width: 30px;
+  height: 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.menu__btn span {
+  height: 2px;
+  background-color: #fff;
+  width: 100%;
+}
+
+.menu__list-link {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.menu__list-link--active {
+  color: #0066ff;
+}
+
+.footer {
+  background-color: #151515;
+  padding: 50px 0px 32px 0px;
+  color: white;
+}
+
+.footer__menu {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.footer__menu-list {
+  max-width: 225px;
+}
+
+.footer__menu-title {
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+.footer__menu-item + .footer__menu-item {
+  padding-top: 20px;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.footer__copy {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+.footer__copy-text {
+  font-size: 12px;
+}
+
+.copy__nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.top {
+  text-align: center;
+  padding-top: 250px;
+  padding-bottom: 40px;
+  position: absolute;
+  z-index: 6;
+  left: 0;
+  right: 0;
+}
+
+.title {
+  padding-bottom: 40px;
+  color: #fff;
+  font-size: 96px;
+  font-weight: 700;
+}
+
+.top__link {
+  background-color: #151515;
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  padding: 23px;
+  max-width: 430px;
+  width: 100%;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.swiper-wrapper {
+}
+
+.swiper-slide {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+}
+
+.swiper-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(21, 21, 21, 0.3);
+}
+
+.swiper-pagination-bullet {
+  width: 120px;
+  height: 3px;
+  background-color: #151515;
+  border-radius: 0;
+  opacity: 1;
+  margin: 0 15px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 50px;
+}
+
+.why-lease {
+  padding: 150px 0px;
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.why-lease__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.why-lease__item {
+  max-width: 270px;
+  text-align: center;
+}
+
+.why-lease__item-img {
+  margin-bottom: 30px;
+}
+
+.why-lease__item-title {
+  margin-bottom: 30px;
+}
+
+.why-lease__item-text {
+  line-height: 1.3;
+  text-align: left;
+}
+
+.how-does {
+  padding-bottom: 150px;
+}
+
+.how-does__inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.how-does-title {
+  font-size: 24px;
+  font-weight: 700;
+  padding-top: 50px;
+}
+
+.how-does__list {
+  padding: 50px 0px 70px;
+  counter-reset: myCounter;
+}
+
+.how-does__item {
+  list-style-type: none;
+  width: 270px;
+  position: relative;
+  margin-left: auto;
+  padding: 18px 0px 18px 240px;
+  box-sizing: content-box;
+  min-height: 63px;
+}
+
+.how-does__item + .how-does__item {
+  margin-top: 40px;
+}
+
+.how-does__item::before {
+  counter-increment: myCounter;
+  content: counter(myCounter);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+  background-color: #0066ff;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.video-section {
+  text-align: center;
+  padding-bottom: 150px;
+}
+
+.video-section__title {
+  margin-bottom: 20px;
+}
+
+.video-section__text {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.important {
+  padding-bottom: 150px;
+}
+
+.important__title {
+  margin-bottom: 20px;
+}
+
+.important__text {
+  line-height: 1.3;
+  max-width: 560px;
+  margin: 0 auto 50px;
+}
+
+.important__list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.important__item {
+  width: 270px;
+}
+
+.important__item-img {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+.important__item-text {
+  line-height: 1.3;
+}
+
+.contacts {
+  padding: 100px 0px 150px;
+}
+
+.contacts__title {
+  margin-bottom: 20px;
+}
+
+.contacts__text {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 0px 100px;
+  color: #000;
+}
+
+.form {
+  max-width: 580px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.form__input {
+  width: 270px;
+  padding: 18px 20px;
+  border: 1px solid #0066ff;
+  margin-bottom: 50px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #151515;
+}
+
+.form__input::placeholder {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #151515;
+  opacity: 0.5;
+}
+
+.form__textarea {
+  width: 100%;
+  resize: none;
+  height: 290px;
+  padding: 28px 20px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #151515;
+  border: 1px solid #0066ff;
+  margin-bottom: 50px;
+}
+
+.form__textarea::placeholder {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #151515;
+  opacity: 0.5;
+}
+
+.blog {
+  padding-bottom: 150px;
+}
+
+.blog__items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-bottom: 70px;
+}
+
+.blog__item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.blog__title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.blog__link {
+  background-color: #0066ff;
+  padding: 5px 20px;
+}
+
+.blog__item-img {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.admin {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.admin__item {
+  width: 270px;
+  border: 1px solid #999;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.admin__item-icon {
+  width: 80px;
+  stroke: #0066ff;
+  margin-bottom: 20px;
+}
+
+.admin__item-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.admin__text {
+  margin-bottom: 50px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.admin__item-text {
+  margin-bottom: 30px;
+}
+
+.admin__item-link {
+  background-color: #0066ff;
+}
+
+.content-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background-color: white;
+  width: 400px;
+  border-radius: 8px;
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.content-form__title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.close-btn {
+  width: 24px;
+  cursor: pointer;
+}
+
+.dialog {
+  border: 1px solid #999;
+  outline: none;
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+}
+
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+label {
+  font-size: 13px;
+  color: #333;
+}
+
+label span {
+  color: red;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: #3b82f6;
+}
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.cancel {
+  padding: 10px 14px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #444;
+}
+
+.save {
+  padding: 10px 14px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.save:hover {
+  background: #1d4ed8;
+}
+
+.choose {
+  padding: 100px 0 150px;
+}
+
+.tabs {
+  margin-bottom: 70px;
+}
+
+.tabs__btn {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding-bottom: 100px;
+}
+
+.tabs__btn-item {
+  font-weight: 700;
+  font-size: 24px;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.tabs__btn-item--active {
+  color: #0066ff;
+}
+
+.tabs__content-item {
+  display: none;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 100px 40px;
+}
+
+.tabs__content-item.tabs__content-item--active {
+  display: grid;
+}
+
+.card {
+  text-align: center;
+  border: 1px solid #0066ff;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.card__title,
+.card__price {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding: 0px 5px;
+}
+
+.card__text {
+  margin-bottom: 20px;
+}
+
+.card__link {
+  display: block;
+  color: #0066ff;
+  border-top: 1px solid #0066ff;
+  margin-top: auto;
+}
+
+.video-section__content {
+  display: block;
+  max-width: 1000px;
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.car-finance {
+  background: linear-gradient(90deg, #f4f7fb 0%, #eef3f8 100%);
+  overflow: hidden;
+  padding: 70px 40px;
+
+  position: relative;
+}
+
+.car-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.car-finance__content {
+  flex: 0 0 470px;
+  z-index: 2;
+}
+
+.car-finance__title {
+  margin: 0 0 24px;
+
+  font-size: 56px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: #111;
+}
+
+.car-finance__text {
+  margin: 0 0 40px;
+
+  max-width: 420px;
+
+  font-size: 22px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.car-finance__actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 54px;
+  padding: 0 28px;
+
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.btn--primary {
+  color: #fff;
+  background: #1f6fff;
+}
+
+.btn--primary:hover {
+  background: #0f5be0;
+}
+
+.btn--secondary {
+  color: #111;
+  background: #fff;
+  border-color: #cfcfcf;
+}
+
+.btn--secondary:hover {
+  border-color: #111;
+}
+
+.car-finance__image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.car-finance__image img {
+  display: block;
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  object-fit: contain;
+}
+
+.finance-options {
+  padding: 140px 0 60px;
+}
+
+.finance-options__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.finance-card {
+  padding: 40px 24px;
+
+  text-align: center;
+
+  background: #f8f9fc;
+}
+
+.finance-card__icon {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 24px;
+}
+
+.finance-card__icon img {
+  width: 70px;
+  height: 70px;
+
+  fill: #0066ff;
+  outline: #0066ff;
+}
+
+.finance-card h3 {
+  margin-bottom: 12px;
+
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.finance-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.finance-benefits {
+  padding: 80px 0 140px;
+}
+
+.finance-benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.benefit-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.benefit-card__icon {
+  flex-shrink: 0;
+}
+
+.benefit-card__icon img {
+  width: 52px;
+  height: 52px;
+}
+
+.benefit-card h3 {
+  margin-bottom: 10px;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.benefit-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.lease-video {
+    padding: 100px 0 150px;
+}
+
+.lease-video .section-title {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+  .tabs__content-item {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .car-finance__image {
+    display: none;
+  }
+  .car-wrapper {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  .section-title {
+    margin-bottom: 40px;
+    font-size: 34px;
+  }
+
+  .finance-options__grid,
+  .finance-benefits__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .menu__list {
+    height: 100vh;
+    padding-top: 200px;
+    position: absolute;
+    z-index: 5;
+    background-color: #151515;
+    flex-direction: column;
+    gap: 55px;
+    inset: 0;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform 0.2s ease;
+  }
+
+  .menu__list.menu__list--active {
+    display: flex;
+    transform: translateY(0%);
+  }
+
+  .menu__btn,
+  .logo {
+    position: relative;
+    z-index: 10;
+  }
+
+  .menu__btn {
+    display: flex;
+  }
+
+  .video-section__content {
+    height: 400px;
+  }
+
+  .tabs__btn {
+    gap: 35px;
+    padding-bottom: 50px;
+  }
+
+  .tabs__content-item {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .car-finance__image {
+    display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 70px;
+  }
+  .top__link {
+    font-size: 28px;
+    max-width: 360px;
+    padding: 16px;
+  }
+  .footer__menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 0px 16px;
+  }
+  .swiper-pagination-bullet {
+    width: 66px;
+  }
+  .why-lease__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .important__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-lease__item {
+    max-width: 100%;
+    width: auto;
+  }
+  .important__item {
+    max-width: 100%;
+    width: auto;
+  }
+
+  .tabs__content-item {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .tabs__btn {
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .tabs__btn-item {
+    font-size: 18px;
+  }
+
+  .blog__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .form__input {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .car-finance__content {
+    flex: none;
+    width: 100%;
+  }
+
+  .car-finance__text {
+    max-width: 100%;
+  }
+
+  .car-finance__actions {
+    justify-content: center;
+  }
+
+  .car-finance__image {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .car-finance__image img {
+    max-width: 100%;
+  }
+  .finance-options,
+  .finance-benefits {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    margin-bottom: 32px;
+    font-size: 28px;
+  }
+
+  .finance-options__grid,
+  .finance-benefits__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .finance-card {
+    padding: 32px 24px;
+  }
+
+  .benefit-card {
+    gap: 16px;
+  }
+
+  .benefit-card__icon img {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (max-width: 540px) {
+  .title {
+    font-size: 60px;
+  }
+
+  .top__link {
+    font-size: 24px;
+    max-width: 310px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 40px;
+    margin: 0 10px !important;
+  }
+
+  .why-lease__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .important__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .why-lease,
+  .how-does {
+    padding: 50px 0;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .how-does__list {
+    padding: 30px 0 40px;
+  }
+
+  .video-section__content {
+    height: 200px;
+  }
+
+  .how-does__item {
+    padding: 65px 0px 19px 0px;
+    margin-right: 0;
+    width: auto;
+  }
+
+  .how-does__item::before {
+    right: 0;
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    font-size: 32px;
+  }
+
+  .video-section {
+    padding: 50px 0px;
+  }
+
+  .app {
+    flex-wrap: wrap;
+  }
+
+  .copy__nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .choose {
+    padding: 50px 0px 80px;
+  }
+
+  .tabs__content-item {
+    gap: 40px 0px;
+  }
+
+  .blog__title {
+    margin-bottom: 10px;
+  }
+
+  .blog__link {
+    margin-left: auto;
+  }
+
+  .tabs__btn {
+    flex-direction: column;
+  }
+
+  .tabs__btn-item {
+    font-size: 20px;
+  }
+
+  .contacts__text {
+    padding: 0;
+  }
+
+  .contacts {
+    padding: 50px 0 80px;
+  }
+
+  .blog {
+    padding-bottom: 80px;
+  }
+  .car-finance__title {
+    font-size: 34px;
+  }
+
+  .car-finance__text {
+    font-size: 16px;
+  }
+
+  .car-finance__actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

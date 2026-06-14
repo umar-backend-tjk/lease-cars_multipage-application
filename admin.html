@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="admin">
+      <div class="container">
+        <h2 class="section-title">Admin Panel</h2>
+        <p class="admin__text">Choose an option to add new content</p>
+        <ul class="admin__items">
+          <li class="admin__item">
+            <svg
+              c
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="admin__item-icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"
+              />
+            </svg>
+            <p class="admin__item-title">Add Article</p>
+            <p class="admin__item-text">Create and publish new articles</p>
+            <a href="#" class="admin__item-link button" id="add-article-btn"
+              >Add Article</a
+            >
+          </li>
+          <li class="admin__item">
+            <svg
+              width="80px"
+              height="80px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="admin__item-icon"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M2 14.803v6.447c0 .414.336.75.75.75h1.614a.75.75 0 0 0 .74-.627L5.5 19h13l.395 2.373a.75.75 0 0 0 .74.627h1.615a.75.75 0 0 0 .75-.75v-6.447a5.954 5.954 0 0 0-1-3.303l-.78-1.17a1.994 1.994 0 0 1-.178-.33h.994a.75.75 0 0 0 .671-.415l.25-.5A.75.75 0 0 0 21.287 8H19.6l-.31-1.546a2.5 2.5 0 0 0-1.885-1.944C15.943 4.17 14.141 4 12 4c-2.142 0-3.943.17-5.405.51a2.5 2.5 0 0 0-1.886 1.944L4.399 8H2.714a.75.75 0 0 0-.67 1.085l.25.5a.75.75 0 0 0 .67.415h.995a1.999 1.999 0 0 1-.178.33L3 11.5c-.652.978-1 2.127-1 3.303zm15.961-4.799a4 4 0 0 0 .34.997H5.699c.157-.315.271-.65.34-.997l.632-3.157a.5.5 0 0 1 .377-.39C8.346 6.157 10 6 12 6c2 0 3.654.156 4.952.458a.5.5 0 0 1 .378.389l.631 3.157zM5.5 16a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM20 14.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
+                fill="#fff"
+              />
+            </svg>
+            <p class="admin__item-title">Add Car</p>
+            <p class="admin__item-text">Add new cars</p>
+            <a href="#" class="admin__item-link button" id="add-car-btn"
+              >Add Car</a
+            >
+          </li>
+        </ul>
+
+        <dialog class="dialog" id="article-dialog">
+          <div class="dialog-header">
+            <h2>Add New Article</h2>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="close-btn"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+              />
+            </svg>
+          </div>
+          <form
+            action="https://6a23c835420469ff067a82c4.mockapi.io/api/articles"
+            method="post"
+            class="content-form"
+            id="article-form"
+          >
+            <div class="field">
+              <label for="title">Title <span>*</span></label>
+              <input
+                type="text"
+                id="title"
+                name="title"
+                placeholder="Enter article title"
+                required
+              />
+            </div>
+
+            <div class="field">
+              <label for="text">Text <span>*</span></label>
+              <textarea
+                id="text"
+                name="text"
+                placeholder="Enter article text"
+                required
+              ></textarea>
+            </div>
+
+            <div class="field">
+              <label for="article-photo">Photo <span>*</span></label>
+              <input
+                type="text"
+                id="article-photo"
+                name="photo"
+                placeholder="Enter photo URL"
+                required
+              />
+            </div>
+
+            <div class="actions">
+              <button type="button" class="cancel">CANCEL</button>
+              <button type="submit" class="save">SAVE</button>
+            </div>
+          </form>
+        </dialog>
+
+        <dialog class="dialog" id="car-dialog">
+          <div class="dialog-header">
+            <h2>Add New Car</h2>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="close-btn"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+              />
+            </svg>
+          </div>
+          <form
+            action="https://6a23c835420469ff067a82c4.mockapi.io/api/cars"
+            method="post"
+            class="content-form"
+            id="car-form"
+          >
+            <div class="row">
+              <div class="field">
+                <label for="brend">Make <span>*</span></label>
+                <input
+                  type="text"
+                  id="brend"
+                  name="brend"
+                  placeholder="Enter make"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label for="model">Model <span>*</span></label>
+                <input
+                  type="text"
+                  id="model"
+                  name="model"
+                  placeholder="Enter model"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="field">
+                <label for="year">Year <span>*</span></label>
+                <input
+                  type="number"
+                  id="year"
+                  name="year"
+                  placeholder="Enter year"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label for="monthly-price">Price <span>*</span></label>
+                <input
+                  type="number"
+                  id="monthly-price"
+                  name="monthly-price"
+                  placeholder="Enter price"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="photo">Photo</label>
+              <input
+                type="text"
+                id="photo"
+                name="photo"
+                placeholder="Enter photo URL"
+                required
+              />
+            </div>
+
+            <div class="actions">
+              <button type="button" class="cancel">CANCEL</button>
+              <button type="submit" class="save">SAVE</button>
+            </div>
+          </form>
+        </dialog>
+      </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+  </body>
+</html>
